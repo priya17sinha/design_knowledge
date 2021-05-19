@@ -5,8 +5,11 @@
 -DIP implementation- Substitution/Abstraction through interfaces. 
 -Identify Service Consumer(High level modules) and Service Provider(low level modules). Compiler of consumer class should not be knowing of consumer, then we achieve loosely coupled.
 -TaskManager and TaskScheduler both has dependency on SimpleQueue. There can be multiple queques which can be used at runtime, and would also need another queue for test enviornment. 
--So, we make Queue as part of an Interface and call the specific queue based on need at runtime.
+-So, we make Queue as part of an Interface(--->) and call the specific queue based on need at runtime.
 -This is implemented through Runtime Polymorphism and abstraction(so that interfaces are not FAT).
 - Interfaces are a public view of an object. But sometimes, these view contain more info that is required and thats why called FAT interface.
+- Whenever BASE type is interface, use implement and not extends. 
+- The cosumer classes contain the implementation of the Interface and whoever has the reference of the interface, can use the classes as they have the implementation.These classes implement the contract which has been published.
+- 
 
 
