@@ -1,12 +1,18 @@
 #Complete Code Reusability
-- When one want complete code reusuaility, we go for inheritance.
+-When one want complete code reusuaility, we go for inheritance.
 -Releationship defined- is-A
-- Checks to be made, before applying inheritance
-  -Commonality
-  -Family
-  -variation
-  -Concrete- They are required/ compeletness
-- Example- Window, Button, TextBox all have same family, UI-Family, have common code, variation exists and the they all are required, so we create another class UIElements(Base class) and other classes inherit from those.
+-Checks to be made, before applying inheritance
+ -Commonality
+ -Family
+ -variation
+ -Concrete- They are required/ compeletness
+-Example- Window, Button, TextBox all have same family, UI-Family, have common code, variation exists and the they all are required, so we create another class UIElements(Base class) and other classes inherit from those.
 -Always better to mark Base class as abstract(cannot be instantiated, as doesnot have enough info) and its constructor protected(others cannot access it).
-> Object Reusuability
-- When there exists has-A relation
+
+#Object Reusuability
+- When there exists has-A/uses relationship
+- 3 types- Association, Composition, Aggregation
+- Association- A LabReport belongs to Patient,An id-card belongs to employee, Laptop/Assest belongs to Employee, these cases we show the relationshp using Association, ->
+- Composition- contains/death relationshp. Container and Item are defined, and item lifetime is dictated by container. Ex- Window. Window is container and button, textbox, labels are items. When Window is closed, Buttons, textbox should also be disposed.
+-Aggregation- holds/part of relationshp. Container, Item relationshp, but item can exist without container as well. Ex- Car has engine, but engine can exist independently as well.
+
