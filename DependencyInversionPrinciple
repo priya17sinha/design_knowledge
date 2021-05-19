@@ -6,7 +6,7 @@
 -Identify Service Consumer(High level modules) and Service Provider(low level modules). Compiler of consumer class should not be knowing of consumer, then we achieve loosely coupled.
 -TaskManager and TaskScheduler both has dependency on SimpleQueue. There can be multiple queques which can be used at runtime, and would also need another queue for test enviornment. 
 -So, we make Queue as part of an Interface(--->) and call the specific queue based on need at runtime.
--This is implemented through Runtime Polymorphism and abstraction(so that interfaces are not FAT).
+-This is implemented through Runtime Polymorphism and abstraction(interfaces).
 - Interfaces are a public view of an object. But sometimes, these view contain more info that is required and thats why called FAT interface.
 - Whenever BASE type is interface, use implement and not extends. 
 - The cosumer classes contain the implementation of the Interface and whoever has the reference of the interface, can use the classes as they have the implementation.These classes implement the contract which has been published.
@@ -16,8 +16,13 @@
 -Dont create objects of implementation and call, better you ask for that implementation via interface. This technique is called as Prepare the Program for injection.
 -Dependency Injection- Create the object outside and you inject that object.
 -Types of Injection-
- -Constructor
- -Setter :
- -Property
+ -Constructor:dependency is must, we dont want to create object without dependency, and dependency will not change for the lifetime of object, because constructor can be called for an object.
+ -Setter : dependency is optional. Dependant can come with dependency but later this can be changed also.
+ -Property:
+ 
+ >Design Pattern used in DIP Example- TaskManager and TaskScheduler
+ -Stratergy Pattern: When we use interface and substitute one implementation with other, its called Stratergy(algorithm).
+ -Family of algorithms- Queue, at runtime we can pick any, and they are substituable to each other.
+ 
 
 
