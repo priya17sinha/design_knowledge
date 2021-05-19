@@ -1,3 +1,8 @@
 #Stratergy Pattern
 -Every time we use Runtime Poly, we use Stratergy Pattern.
 -Principles involved- SRP(Separate Responsibility)+ DIP/abstraction(To substitute, build interface)=>we use runtime poly,so as to decide which stratergy to use
+
+>OCP- Open Close Principle
+-Class is open for modification, close for extension
+- Every time, cannot add a new method, as per the user search criteria
+
