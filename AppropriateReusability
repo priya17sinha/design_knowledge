@@ -1,0 +1,12 @@
+> Complete Code Reusability
+- When one want complete code reusuaility, we go for inheritance.
+-Releationship defined- is-A
+- Checks to be made, before applying inheritance
+  -Commonality
+  -Family
+  -variation
+  -Concrete- They are required/ compeletness
+- Example- Window, Button, TextBox all have same family, UI-Family, have common code, variation exists and the they all are required, so we create another class UIElements(Base class) and other classes inherit from those.
+-Always better to mark Base class as abstract(cannot be instantiated, as doesnot have enough info) and its constructor protected(others cannot access it).
+> Object Reusuability
+- When there exists has-A relation
