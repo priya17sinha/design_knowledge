@@ -9,3 +9,4 @@
 -This is implemented through Runtime Polymorphism and abstraction(so that interfaces are not FAT).
 - Interfaces are a public view of an object. But sometimes, these view contain more info that is required and thats why called FAT interface.
 
+
