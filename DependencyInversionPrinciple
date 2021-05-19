@@ -1,0 +1,11 @@
+> DIP
+- When there exists (has-A) relationship, and a dependency exists, we apply DIP.
+- With dependency, the code becomes tightly coupled. Substitution demands loosely coupled.
+-To remove dependency, we create interfaces. 
+-DIP implementation- Substitution/Abstraction through interfaces. 
+-Identify Service Consumer(High level modules) and Service Provider(low level modules). Compiler of consumer class should not be knowing of consumer, then we achieve loosely coupled.
+-TaskManager and TaskScheduler both has dependency on SimpleQueue. There can be multiple queques which can be used at runtime, and would also need another queue for test enviornment. 
+-So, we make Queue as part of an Interface and call the specific queue based on need at runtime.
+-This is implemented through Runtime Polymorphism and abstraction(so that interfaces are not FAT).
+- Interfaces are a public view of an object. But sometimes, these view contain more info that is required and thats why called FAT interface.
+
